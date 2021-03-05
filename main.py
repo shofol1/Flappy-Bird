@@ -1,7 +1,11 @@
 import pygame
 import random  # random number for pipe
 import sys  # to exit we use sys.exit
+
 from pygame import mixer
+
+
+# background Sound
 
 
 def draw_floor():
@@ -98,7 +102,6 @@ bird_move = 0
 game_active = True
 score = 0
 high_score = 0
-Game_Sprites = {}
 
 background = pygame.image.load('gallery/images/background.png').convert()  # we use convert() to speed up display
 pygame.mixer.music.load('gallery/sounds/background.mp3')
@@ -126,7 +129,6 @@ pygame.time.set_timer(PIPE, 1200)
 pipe_height = [200, 300, 400]
 game_over_surface = pygame.image.load('gallery/images/message.png').convert_alpha()
 game_over_rect = game_over_surface.get_rect(center=(360, 270))
-Game_Sprites['message1'] = pygame.image.load('gallery/images/message1.png').convert_alpha()
 flap_sound = pygame.mixer.Sound('gallery/sounds/wing.wav')
 death_sound = pygame.mixer.Sound('gallery/sounds/hit.wav')
 score_sound = pygame.mixer.Sound('gallery/sounds/point.wav')
